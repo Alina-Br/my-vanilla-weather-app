@@ -1,0 +1,67 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  padding: 0 20px;
+  background: linear-gradient(
+    106.8deg,
+    rgb(117, 255, 220) 6%,
+    rgb(163, 216, 255) 47.6%,
+    rgb(248, 215, 251) 87.8%
+  );
+}
+
+.container {
+  padding-top: 20px;
+  display: block;
+}
+
+h1 {
+  color: blueviolet;
+}
+
+.fa-sun {
+  font-size: 50px;
+  color: yellow;
+}
+
+.temperature {
+  color: blueviolet;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+ul {
+  padding: 0 0 10px;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+li::first-letter {
+  text-transform: capitalize;
+}
+
+.weather-app {
+  border: 1px solid slateblue;
+  padding: 15px;
+  margin: 0 auto;
+  border-radius: 15px;
+  max-width: 900px;
+}
+
+.units {
+  position: relative;
+  top: -32px;
+}
+
+.row {
+  margin-right: calc(-4.1 * var(--bs-gutter-x));
+}
+
+small {
+  margin: 20px auto;
+  display: block;
+  max-width: 900px;
+}
