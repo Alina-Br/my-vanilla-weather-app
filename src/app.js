@@ -30,6 +30,7 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
+  let minTempElement = document.querySelector("min-temp");
 
   celsiusTemperature = response.data.main.temp;
 
@@ -44,6 +45,7 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  minTempElement.innerHTML = response.data.main.temp_min;
 
   console.log(response.data);
 }
