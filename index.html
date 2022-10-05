@@ -20,138 +20,69 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <form id="search-form" class="mb-3">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-6">
+                <input
+                  type="search"
+                  class="form-control shadow-sm"
+                  placeholder="Please enter a city"
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="form-control btn btn-primary shadow-sm w-50"
+                />
+              </div>
+            </div>
+          </form>
+          <h1 id="city"></h1>
+          <ul>
+            <li id="date"></li>
+            <li id="description"></li>
+          </ul>
           <div class="row">
             <div class="col-6">
-              <input
-                type="search"
-                class="form-control shadow-sm"
-                placeholder="Please enter a city"
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-              />
-            </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Search"
-                class="form-control btn btn-primary shadow-sm w-50"
-              />
-            </div>
-          </div>
-        </form>
-        <h1 id="city"></h1>
-        <ul>
-          <li id="date"></li>
-          <li id="description"></li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <div class="clearfix">
-              <img src="" alt="Clear" id="icon" class="float-left" />
-              <div class="float-left">
-                <span class="temperature" id="temperature"></span
-                ><span class="units">
-                  <a href="#" id="celsius-link" class="active">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a></span
-                >
+              <div class="clearfix">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <span class="temperature" id="temperature"></span
+                  ><span class="units">
+                    <a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-6">
-            <ul>
-              <li>
-                <i class="fa-solid fa-droplet"></i> Humidity:
-                <span id="humidity"></span>%
-              </li>
-              <li>
-                <i class="fa-solid fa-wind"></i> Wind:
-                <span id="wind"></span>km/h
-              </li>
-              <li>
-                <i class="fa-solid fa-temperature-quarter"></i> Min temp:
-                <span id="temp-min"></span>°C
-              </li>
-              <li>
-                <i class="fa-solid fa-temperature-three-quarters"></i> Max temp:
-                <span id="temp-max"></span>°C
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2">
-            <div class="card border-success mb-7">
-              <div class="card-header bg-transparent border-success">
-                Tuesday
-              </div>
-              <div class="card-body text-success">
-                <h5 class="card-title">8/16</h5>
-                <p class="card-text">☀</p>
-              </div>
-              <div class="card-footer bg-transparent border-success">
-                19°C - 27°C
-              </div>
+            <div class="col-6">
+              <ul>
+                <li>
+                  <i class="fa-solid fa-droplet"></i> Humidity:
+                  <span id="humidity"></span>%
+                </li>
+                <li>
+                  <i class="fa-solid fa-wind"></i> Wind:
+                  <span id="wind"></span>km/h
+                </li>
+                <li>
+                  <i class="fa-solid fa-temperature-quarter"></i> Min temp:
+                  <span id="temp-min"></span>°C
+                </li>
+                <li>
+                  <i class="fa-solid fa-temperature-three-quarters"></i> Max
+                  temp: <span id="temp-max"></span>°C
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="col-2">
-            <div class="card border-success mb-7">
-              <div class="card-header bg-transparent border-success">
-                Wednesday
-              </div>
-              <div class="card-body text-success">
-                <h5 class="card-title">8/17</h5>
-                <p class="card-text">⛅</p>
-              </div>
-              <div class="card-footer bg-transparent border-success">
-                20°C - 25°C
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card border-success mb-7">
-              <div class="card-header bg-transparent border-success">
-                Thursday
-              </div>
-              <div class="card-body text-success">
-                <h5 class="card-title">8/18</h5>
-                <p class="card-text">🌥</p>
-              </div>
-              <div class="card-footer bg-transparent border-success">
-                18°C - 24°C
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card border-success mb-7">
-              <div class="card-header bg-transparent border-success">
-                Friday
-              </div>
-              <div class="card-body text-success">
-                <h5 class="card-title">8/19</h5>
-                <p class="card-text">🌦</p>
-              </div>
-              <div class="card-footer bg-transparent border-success">
-                17°C - 23°C
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card border-success mb-7">
-              <div class="card-header bg-transparent border-success">
-                Saturday
-              </div>
-              <div class="card-body text-success">
-                <h5 class="card-title">8/20</h5>
-                <p class="card-text">☀</p>
-              </div>
-              <div class="card-footer bg-transparent border-success">
-                18°C - 27°C
-              </div>
-            </div>
-          </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
       </div>
       <small>
