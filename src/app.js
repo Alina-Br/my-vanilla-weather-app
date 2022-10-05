@@ -31,6 +31,7 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
   let minTempElement = document.querySelector("#temp-min");
+  let maxTempElement = document.querySelector("#temp-max");
 
   celsiusTemperature = response.data.main.temp;
 
@@ -46,6 +47,7 @@ function displayTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   minTempElement.innerHTML = Math.round(response.data.main.temp_min);
+  maxTempElement.innerHTML = Math.round(response.data.main.temp_max);
 
   console.log(response.data);
 }
