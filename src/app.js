@@ -30,7 +30,7 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
-  let minTempElement = document.querySelector("temp-min");
+  let minTempElement = document.querySelector("#temp-min");
 
   celsiusTemperature = response.data.main.temp;
 
